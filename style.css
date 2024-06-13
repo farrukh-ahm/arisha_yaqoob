@@ -150,7 +150,7 @@ body{
 
     position: sticky;
     bottom: 0;
-    min-block-size: 100vh;
+    min-block-size: 100dvh;
     inline-size: 100vw;
     z-index: -1;
     background-color: red;
@@ -165,33 +165,44 @@ body{
     min-block-size: 80rem;
     min-inline-size: 100dvw;
     background-color: #000;
-    /* display: grid;
-    place-items: center; */
-    align-content: center;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    place-items: center;
+    gap: 0.5em;
+    /* align-content: center; */
 
     .secondary-image{
 
         inline-size: 50%;
         block-size: 50dvh;
         margin: auto;
-        background-color: aqua;
+        position: relative;
+        /* background-color: aqua; */
         /* object-fit: contain; */
 
         .secondary-page-image{
             inline-size: 100%;
             block-size: 100%;
-            animation: appear linear forwards;
-            animation-timeline: scroll;
-            animation-range-start: 20%;
-            animation-range-end: 100%;
-            /* -moz-animation- */
+            transform: translateX(-50%);
+            opacity: 0;
+            transition: all 0.2s linear;
+        }
+
+        .appear{
+            transform: translateX(0);
+            opacity: 1;
         }
 
     }
 
 }
 
-@keyframes appear {
+/* .secondary-page-image.appear{
+    transform: translateX(0);
+    opacity: 1;
+} */
+
+/* @keyframes appear {
     0%{
         opacity: 0;
         transform: translateX(-3em);
@@ -201,4 +212,4 @@ body{
         opacity: 1;
         transform: translate(0);
     }
-}
+} */
