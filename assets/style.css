@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+AU+TAS:wght@100..400&display=swap');
+
+*,*::after,*::before{
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+:root{
+
+    --body-font: "PT Serif";
+    --title-font: "Playwrite AU TAS";
+
+}
+
+body{
+
+    min-block-size: 100dvh;
+    min-inline-size: 100dvw;
+    overflow-x: hidden;
+    font-family: var(--body-font);
+
+}
+
+.hero{
+
+    min-block-size: 100dvh;
+    inline-size: 100dvw;
+    position: relative;
+
+    .link-position-wrapper{
+
+        position: absolute;
+        top: 0;
+        right: 0;
+        /* margin-inline-end: 8px; */
+        inline-size: min(5em,15%);
+        aspect-ratio: 1;
+        /* background-color: aqua; */
+
+        .link-container{
+
+            inline-size: 100%;
+            block-size: 100%;
+            position: relative;
+
+
+            .links{
+
+                position: absolute;
+                top: 0;
+                right: 0;
+                transform: translateX(200%);
+                inline-size: clamp(15rem,12rem,40%);
+                min-block-size: 100dvh;
+                background-color: rgba(0,0,0,0.5);
+                backdrop-filter: blur(8px);
+                z-index:5;
+                list-style: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 2rem;
+                gap: 1rem;
+                transition: all 0.3s linear;
+
+                .link{
+
+                    a{
+                        text-decoration: none;
+                        color: #fff;
+                    }
+
+                }
+
+            }
+
+
+            label{
+                position: absolute;
+                inset: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5em;
+                justify-content: center;
+                align-items: center;
+                cursor: pointer;
+                z-index: 99;
+                /* background-color: antiquewhite; */
+
+                input{
+                    display: none;
+                }
+
+                .blocks{
+                    inline-size: 60%;
+                    block-size: 2px;
+                    background-color: #fff;
+                    border-radius: 8px;
+                    transition: all 0.3s linear;
+                }
+
+                &:has(input:checked) span{
+                    background-color: #fff;
+                }
+                &:has(input:checked) + ul{
+                    transform: translateX(0);
+                }
+            }
+        }
+    }
+
+
+    .hero-image{
+        position: absolute;
+        inset: 0;
+        inline-size: 100%;
+        block-size: 100%;
+        background-color: rgba(0,0,0,0.5);
+        background-image: url(./images/hero-image.avif);
+        /* background-image: linear-gradient(to top, rgba(0,0,0,0.2), rgba(255,255,255,0.5)); */
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-image: fill 1 linear-gradient(rgba(0,0,0,0.7), rgba(31, 30, 30, 0.7));
+        /* position: sticky;
+        top: 0; */
+        display: grid;
+        grid-template-columns: 40% 60%;
+
+        .pp-container{
+            align-content: center;
+            text-align: center;
+            /* background-color: antiquewhite; */
+
+            .pp{
+                inline-size: clamp(8rem,15vw,20em);
+                aspect-ratio: 1;
+                border-radius: 50%;
+                margin: auto
+            }
+        }
+
+        .name-container{
+            /* background-color: aqua; */
+        }
+
+    }
+
+}
+
