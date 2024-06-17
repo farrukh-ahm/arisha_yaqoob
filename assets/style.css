@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+AU+TAS:wght@100..400&display=swap&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playwrite+AU+TAS:wght@100..400&display=swap&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900');
 
 *,*::after,*::before{
 
@@ -11,10 +11,13 @@
 :root{
 
     --body-font: "PT Serif";
-    --title-font: "Playwrite AU TAS";
-    --background-odd: #F0F2F2;
-    --font-odd: #2E4A70;
+    --title-font: "Merriweather, serif";
+    --background-even: #F0F2F2;
+    --font-even: #2E4A70;
+    --background-odd: #2E4A70;
+    --font-odd: #F0F2F2;
     --last-name-color: #73C7E3;
+    --title-font-size: clamp(2em, 8vw, 4em);
 
 }
 
@@ -28,8 +31,9 @@ body{
     /* inline-size: 100vw; */
     /* overflow-x: hidden; */
     font-family: var(--body-font);
-    scroll-behavior: smooth;
-    background-color: red;
+    /* scroll-behavior: smooth; */
+    scroll-snap-type: x proximity;
+    /* background-color: red; */
 
 }
 
@@ -133,7 +137,7 @@ label:has(input:checked) + .links{
     block-size: 100%;
     background-color: rgba(0,0,0,0.5);
     /* background-image: url(./images/hero-image.avif); */
-    background-image: url(./images/hero2.avif);
+    background-image: url(./images/hero-image.avif);
     /* background-image: linear-gradient(to top, rgba(0,0,0,0.2), rgba(255,255,255,0.5)); */
     background-repeat: no-repeat;
     background-position: center;
@@ -242,11 +246,11 @@ label:has(input:checked) + .links{
     inline-size: 100%;
     position: sticky;
     bottom: 0;
-    background-color: var(--background-odd);
+    background-color: var(--background-even);
     align-content: center;
     text-align: center;
     z-index: -1;
-    color: var(--font-odd);
+    color: var(--font-even);
 
 }
 
@@ -254,29 +258,6 @@ label:has(input:checked) + .links{
 
     content: "";
     position: absolute;
-    /* top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    inline-size: min(40em, 80%);
-    block-size: 80vh; */
-    /* top: 1.5em;
-    left: 1em;
-    bottom: 1em;
-    right: 1em; */
-
-}
-
-.second-main-wrapper::before{
-
-    /* background-color: #73C7E3; */
-    left: 2.5em;
-    right: 2.5em;
-    top: 3.5em;
-    bottom: 3.5em;
-    border: 2px double var(--font-odd);
-    /* border-left: 1px double var(--font-odd);
-    border-right: 1px solid var(--font-odd); */
-    /* z-index: 5; */
 
 }
 
@@ -285,14 +266,12 @@ label:has(input:checked) + .links{
     bottom: 2em;
     left: 1em;
     right: 1em;
-    /* border-top: 1px solid var(--font-odd);
-    border-bottom: 1px solid var(--font-odd); */
-    background-image: url(./images/flower.avif);
+    background-image: url(./images/hero2.avif);
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     z-index: -1;
-    border-image: fill 1 linear-gradient(rgba(255,255,255,0.7), rgba(255, 255, 255, 0.7));
+    border-image: fill 1 linear-gradient(rgba(255,255,255,0.9), rgba(255, 255, 255, 0.9));
     /* background-color: red; */
 
 }
@@ -301,13 +280,15 @@ label:has(input:checked) + .links{
     font-size: 2.75rem;
     padding-inline: 3rem;
     margin-bottom: 1em;
-    font-family: "Satisfy", cursive;
+    font-family: var(--title-font);
+    font-weight: 400;
     /* filter: drop-shadow(0 0 2px var(--last-name-color)); */
 }
 
 .intro-two{
     font-size: 1.75rem;
     padding-inline: 3rem;
+    font-weight: 400;
 }
 
 @container second-main (inline-size<=700px){
@@ -320,25 +301,37 @@ label:has(input:checked) + .links{
     }
 }
 
-/* .fade-in{
-    animation: fade-in 5s ease-in;
+
+
+
+/* --------------------PROFESSIONAL PORTFOLIO SECTION ----------------------------*/
+.professional-section{
+    min-block-size: 100dvh;
+    inline-size: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-odd);
 }
 
-.fade-in:nth-of-type(2){
-    animation-delay: 0.6s;
-}
+.title-container{
+    inline-size: 100%;
+    block-size: 10rem;
+    align-content: center;
+    text-align: center;
+    padding-block: 8px;
+    /* background-color: #73C7E3; */
 
-@keyframes fade-in{
-    0%{
-        color: var(--background-odd);
+    h2{
+        font-size: var(--title-font-size);
+        font-family: var(--title-font);
+        font-weight: 400;
+        color: var(--font-odd);
     }
-    100%{
-        color: var(--font-odd)
-    }
-} */
 
-
-.next{
-    min-block-size: 80rem;
-    background-color: hotpink;
+    p{
+        font-size: clamp(1em, 4vw, 2em);
+        color: var(--font-odd);
+        font-weight: 400;
+        padding-block: 5px;
+    };
 }
