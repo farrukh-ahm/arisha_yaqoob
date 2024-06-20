@@ -329,9 +329,20 @@ label:has(input:checked) + .links{
     }
 
     p{
-        font-size: clamp(1em, 4vw, 2em);
+        font-size: clamp(1em, 3vw, 2em);
         color: var(--font-odd);
         font-weight: 400;
         padding-block: 5px;
     };
+}
+
+.projects-container{
+
+    inline-size: min(90%, 60rem);
+    /* min-block-size: 80dvh; */
+    background-color: aquamarine;
+    margin: 1.5em auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+
 }
