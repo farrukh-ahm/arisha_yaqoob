@@ -148,7 +148,7 @@ label:has(input:checked) + .links{
     block-size: 100%;
     /* background-color: rgba(0,0,0,0.5); */
     /* background-image: url(./images/hero-image.avif); */
-    background-image: url(./images/3.jpg);
+    background-image: url(./images/B.jpg);
     /* background-image: linear-gradient(to top, rgba(0,0,0,0.2), rgba(255,255,255,0.5)); */
     background-repeat: no-repeat;
     background-position: center;
@@ -197,6 +197,7 @@ label:has(input:checked) + .links{
 
 .f-name{
     animation: f-name-pop 0.8s linear forwards;
+    color: var(--font-even);
 }
 
 .l-name{
@@ -288,7 +289,7 @@ label:has(input:checked) + .links{
 }
 
 .intro-one{
-    font-size: 2rem;
+    font-size: 1.85rem;
     padding-inline: 3rem;
     margin-bottom: 1em;
     font-family: var(--title-font);
@@ -308,7 +309,8 @@ label:has(input:checked) + .links{
 
 @container second-main (inline-size<=700px){
     .second-main-wrapper > .intro-one{
-        font-size: 1.75rem;
+        font-size: 1.35rem;
+        line-height: 1.5em;
     }
 
     /* .second-main-wrapper > .intro-two{
@@ -366,8 +368,18 @@ label:has(input:checked) + .links{
 }
 
 @media (max-width: 500px){
+
+    .title-container{
+
+        padding-block-start: 1em;
+        block-size: 5rem;
+
+    }
+
     .projects-container{
         gap: 5em;
+        margin: 0.75em auto;
+        padding-block: 1em;
         /* background-color: yellowgreen; */
     }
 }
@@ -391,6 +403,7 @@ label:has(input:checked) + .links{
         inline-size: 100%;
         text-align: center;
         list-style: none;
+        padding-inline-start: 0;
     }
 
     .projects-container .project .project-image{
@@ -398,7 +411,7 @@ label:has(input:checked) + .links{
         block-size: 60%;
         
         img{
-            object-fit: contain;
+            object-fit: fill;
         }
     }    
 }
