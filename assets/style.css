@@ -340,9 +340,34 @@ label:has(input:checked) + .links{
 
     inline-size: min(90%, 60rem);
     /* min-block-size: 80dvh; */
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
     margin: 1.5em auto;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    gap: 2em;
 
+}
+
+.project{
+    inline-size: 90%;
+    block-size: 20em;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1em;
+    /* background-color: #fff; */
+}
+
+.project-info{
+    inline-size: 40%;
+    block-size: 100%;
+    background-color: hotpink;
+    place-content: center;
+}
+
+.project-image{
+    inline-size: 60%;
+    block-size: 100%;
+    background-color: hotpink;
 }
