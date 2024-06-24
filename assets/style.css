@@ -38,6 +38,16 @@ body{
 
 }
 
+.odd-section{
+    background-color: var(--background-odd);
+    color: var(--font-odd);
+}
+
+.even-section{
+    background-color: var(--background-even);
+    color: var(--font-even);
+}
+
 .hero{
 
     min-block-size: 100dvh;
@@ -315,7 +325,7 @@ label:has(input:checked) + .links{
     inline-size: 100%;
     display: flex;
     flex-direction: column;
-    background-color: var(--background-odd);
+    /* background-color: var(--background-odd); */
 }
 
 .title-container{
@@ -330,12 +340,12 @@ label:has(input:checked) + .links{
         font-size: var(--title-font-size);
         font-family: var(--title-font);
         font-weight: 400;
-        color: var(--font-odd);
+        /* color: var(--font-odd); */
     }
 
     p{
         font-size: clamp(1em, 3vw, 1.75em);
-        color: var(--font-odd);
+        /* color: var(--font-odd); */
         font-weight: 400;
         padding-block: 5px;
     };
