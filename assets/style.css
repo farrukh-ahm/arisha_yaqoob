@@ -578,8 +578,12 @@ label:has(input:checked) + .links{
     block-size: 100%;
     object-fit: fill;
     border-radius: 8px;
-    box-shadow: 0 0 8px 0 rgba(207, 207, 207, 0.5);
-    animation: shadow 1s linear alternate infinite;   
+    box-shadow:  
+    -7px -7px 10px -5px transparent, 
+    7px 7px 10px -5px transparent, 
+    0 0 5px 0px rgba(255,255,255,0),
+    0 55px 35px -20px rgba(0, 0, 0, 0.5);;
+    /* animation: shadow 1s linear alternate infinite;    */
 }
 
 @keyframes shadow {
