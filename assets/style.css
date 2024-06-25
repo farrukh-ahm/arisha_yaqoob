@@ -434,6 +434,7 @@ label:has(input:checked) + .links{
     place-content: center;
     padding-inline-start: 2em;
     color: var(--font-odd);
+    opacity: 0;
 
     h3{
         font-size: clamp(1em,1vw,1.25em);
@@ -456,6 +457,7 @@ label:has(input:checked) + .links{
     inline-size: 60%;
     block-size: 100%;
     border-radius: 8px;
+    opacity: 0;
     /* filter: drop-shadow(0 0 0 8px); */
     /* background-color: hotpink; */
 
@@ -480,16 +482,16 @@ label:has(input:checked) + .links{
 }
 
 .info-appear{
-    animation: info-app 3s linear forwards;
+    animation: info-app 0.8s linear forwards;
 }
 
 .image-appear{
-    animation: image-app 3s linear forwards;
+    animation: image-app 0.8s linear forwards;
 }
 
 @keyframes info-app{
     0%{
-        transform: translateX(-20%);
+        transform: translateX(-10%);
         opacity: 0;
     }
     100%{
