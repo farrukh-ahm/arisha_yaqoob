@@ -66,7 +66,7 @@ body{
     top: 0;
     left: 0;
     inline-size: 100vw;
-    block-size: 7rem;
+    block-size: 6.5rem;
     background-color: rgba(115, 199, 227, 0.8);
     /* filter: blur(3px); */
     backdrop-filter: blur(5px);
@@ -74,27 +74,32 @@ body{
     text-align: center;
     align-content: center;
 
-    .main-nav{
-        list-style: none;
+}
 
-        li{
-            display: inline-block;
-            padding: 1.25em;
+.main-nav{
+    list-style: none;
+}
 
-            a{
-                text-decoration: none;
-                color: var(--font-odd);
-                font-size: 1.25em;
-                transition: all 0.3s linear;
-                
-                &:hover{
-                    color: var(--font-even)
-                }
-            }
+.main-nav li{
+    display: inline-block;
+    padding: 1.25em;
+}
 
-        }
+.main-nav li a{
+    text-decoration: none;
+    color: var(--font-odd);
+    font-size: 1.25em;
+    transition: all 0.3s linear;
+}
+
+.main-nav li a:hover{
+    color: var(--font-even)
+}
+
+@media (max-width: 500px){
+    .main-nav-container{
+        display: none;
     }
-
 }
 
 
@@ -117,8 +122,15 @@ body{
     /* margin-inline-end: 8px; */
     inline-size: min(5em,15%);
     aspect-ratio: 1;
+    opacity: 0;
     /* background-color: aqua; */
 
+}
+
+@media (max-width: 500px){
+    .link-position-wrapper{
+        opacity: 1;
+    }
 }
 
 .link-container{
@@ -137,7 +149,7 @@ body{
     transform: translateX(100%);
     inline-size: clamp(15rem,12rem,40%);
     min-block-size: 100dvh;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(46, 74, 112, 0.8);
     backdrop-filter: blur(8px);
     z-index:5;
     list-style: none;
@@ -179,7 +191,7 @@ input{
 .blocks{
     inline-size: 60%;
     block-size: 2px;
-    background-color: #fff;
+    background-color: var(--background-odd);
     border-radius: 8px;
     /* transition: all 0.3s linear; */
 }
@@ -215,13 +227,13 @@ label:has(input:checked) + .links{
 .pp-container{
     align-content: center;
     text-align: center;
+}
 
-    .pp{
-        inline-size: clamp(8rem,15vw,20em);
-        aspect-ratio: 1;
-        border-radius: 50%;
-        margin: auto
-    }
+.pp{
+    inline-size: clamp(8rem,15vw,20em);
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin: auto
 }
 
 .name-container{
@@ -345,11 +357,11 @@ label:has(input:checked) + .links{
     margin-bottom: 1em;
     font-family: var(--title-font);
     font-weight: 400;
-
-    span{
-        color:var(--last-name-color)
-    }
     /* filter: drop-shadow(0 0 2px var(--last-name-color)); */
+}
+
+.intro-one span{
+    color:var(--last-name-color)
 }
 
 /* .intro-two{
@@ -389,20 +401,36 @@ label:has(input:checked) + .links{
     padding-block: 8px;
     /* background-color: #73C7E3; */
 
-    h2{
+    /* h2{
         font-size: var(--title-font-size);
         font-family: var(--title-font);
-        font-weight: 400;
+        font-weight: 400; */
         /* color: var(--font-odd); */
-    }
+    /* }
 
     p{
-        font-size: clamp(1em, 3vw, 1.75em);
+        font-size: clamp(1em, 3vw, 1.75em); */
         /* color: var(--font-odd); */
-        font-weight: 400;
+        /* font-weight: 400;
         padding-block: 5px;
-    };
+    }; */
 }
+
+.title-container h2{
+    font-size: var(--title-font-size);
+    font-family: var(--title-font);
+    font-weight: 400;
+    /* color: var(--font-odd); */
+}
+
+
+.title-container p{
+    font-size: clamp(1em, 3vw, 1.75em);
+    /* color: var(--font-odd); */
+    font-weight: 400;
+    padding-block: 5px;
+}
+
 
 .projects-container{
 
@@ -504,6 +532,28 @@ label:has(input:checked) + .links{
     }
 }
 
+.project-info h3{
+    font-size: clamp(1em,1vw,1.25em);
+    color: var(--last-name-color);
+}
+
+.project-info li{
+    margin-inline: auto;
+    padding-block-start: 1em;
+
+    /* a{
+        text-decoration: none; */
+        /* color: var(--font-odd); */
+        /* font-size: 1em;
+    } */
+}
+
+.project-info li a{
+    text-decoration: none;
+        /* color: var(--font-odd); */
+    font-size: 1em;
+}
+
 .project-image{
     inline-size: 60%;
     block-size: 100%;
@@ -512,15 +562,24 @@ label:has(input:checked) + .links{
     /* filter: drop-shadow(0 0 0 8px); */
     /* background-color: hotpink; */
 
-    img{
+    /* img{
         inline-size: 100%;
         block-size: 100%;
         object-fit: fill;
         border-radius: 8px;
         box-shadow: 0 0 8px 0 rgba(207, 207, 207, 0.5);
         animation: shadow 1s linear alternate infinite;
-    }
+    } */
 
+}
+
+.project-image img{
+    inline-size: 100%;
+    block-size: 100%;
+    object-fit: fill;
+    border-radius: 8px;
+    box-shadow: 0 0 8px 0 rgba(207, 207, 207, 0.5);
+    animation: shadow 1s linear alternate infinite;   
 }
 
 @keyframes shadow {
