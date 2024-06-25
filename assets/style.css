@@ -478,3 +478,33 @@ label:has(input:checked) + .links{
         box-shadow: 0 0 15px 0 rgba(207, 207, 207, 0.5);   
     }
 }
+
+.info-appear{
+    animation: info-app 3s linear forwards;
+}
+
+.image-appear{
+    animation: image-app 3s linear forwards;
+}
+
+@keyframes info-app{
+    0%{
+        transform: translateX(-20%);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes image-app{
+    0%{
+        transform: translateX(20%);
+        opacity: 0;
+    }
+    100%{
+        transform:translateX(0);
+        opacity: 1;
+    }
+}
