@@ -43,9 +43,17 @@ body{
     color: var(--font-odd);
 }
 
+.odd-section a{
+    color: var(--font-odd)
+}
+
 .even-section{
     background-color: var(--background-even);
     color: var(--font-even);
+}
+
+.even-section a {
+    color: var(--font-even)
 }
 
 .hero{
@@ -433,7 +441,7 @@ label:has(input:checked) + .links{
     /* background-color: hotpink; */
     place-content: center;
     padding-inline-start: 2em;
-    color: var(--font-odd);
+    /* color: var(--font-odd); */
     opacity: 0;
 
     h3{
@@ -447,7 +455,7 @@ label:has(input:checked) + .links{
 
         a{
             text-decoration: none;
-            color: var(--font-odd);
+            /* color: var(--font-odd); */
             font-size: 1em;
         }
     }
