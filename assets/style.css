@@ -624,3 +624,55 @@ label:has(input:checked) + .links{
         opacity: 1;
     }
 }
+
+
+/* -------------------- TECHNICAL SECTION ----------------------------*/
+
+.technical-section{
+
+    min-block-size: 80dvh;
+    position: relative;
+
+}
+
+/* .technical-section h2{
+
+    margin-inline: auto;
+    font-family: var(--title-font);
+    font-size: var(--title-font-size);
+    font-weight: 400;
+    text-align: center;
+    padding-block-start: 1.5em;
+
+} */
+
+.tec-wrapper{
+    inline-size: 80%;
+    min-block-size: 40dvh;
+    margin-block-start: 2em;
+    padding-inline: 1em;
+    /* background-color: pink; */
+    margin-inline: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20em,1fr));
+    column-gap: 1.5em;
+    row-gap: 1.5em;
+    place-items: center;
+    justify-content: center;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2em; */
+
+}
+
+.tech-container{
+    /* inline-size: 5em; */
+    /* background-color: aqua; */
+    text-wrap: nowrap;
+}
+
+.tech{
+    font-size: 1.25em;
+}
