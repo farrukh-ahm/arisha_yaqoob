@@ -43,4 +43,28 @@ const imgObserver = new IntersectionObserver(entries=>{
 
 imgs.forEach(image=>{
     imgObserver.observe(image)
+});
+
+
+// Tech Section observer
+const techTitle = document.querySelector(".tech-title");
+const tech = document.querySelector(".tec-wrapper");
+
+const techTitleObserver = new IntersectionObserver(entries=>{
+
+    entries.forEach(entry => {
+
+        entry.target.classList.toggle("techAnime", entry.isIntersecting)
+
+        if(entry.isIntersecting){
+            techTitleObserver.unobserve(entry.target)
+        }
+
+    })
+
+},{
+    threshold:1
 })
+
+techTitleObserver.observe(techTitle)
+techTitleObserver.observe(tech)

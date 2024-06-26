@@ -550,6 +550,10 @@ label:has(input:checked) + .links{
 
 }
 
+.tech-wrapper{
+    opacity: 0;
+}
+
 .tec-wrapper{
     inline-size: 80%;
     min-block-size: 40dvh;
@@ -562,6 +566,7 @@ label:has(input:checked) + .links{
     row-gap: 1.5em;
     place-items: center;
     justify-content: center;
+    opacity: 0;
 
 }
 .tech-container{
@@ -577,18 +582,18 @@ label:has(input:checked) + .links{
 
     min-block-size: 100dvh;
     inline-size: 100%;
-    background: url(./images/Last.jpg);
-    background-position: cover;
-    background-size: fill;
+    background: url(./images/B.jpg);
+    background-position: center;
+    background-size: cover;
     background-repeat: no-repeat;
     place-content: center;
 
 }
 
-.contact-header{
+/* .contact-header{
 
     font-weight: 700 !important;
-}
+} */
 
 .contact-wrapper{
 
@@ -624,4 +629,23 @@ label:has(input:checked) + .links{
 
 .icon a i{
     font-size: 3em;
+}
+
+
+.techAnime{
+    animation: techAppear 0.6s linear forwards;
+}
+
+@keyframes techAppear {
+
+    0%{
+        transform: translateY(10%);
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
 }
