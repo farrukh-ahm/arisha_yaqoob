@@ -63,7 +63,7 @@ const techTitleObserver = new IntersectionObserver(entries=>{
     })
 
 },{
-    threshold:1
+    threshold:0.2
 })
 
 techTitleObserver.observe(techTitle)
