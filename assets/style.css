@@ -635,22 +635,13 @@ label:has(input:checked) + .links{
 
 }
 
-/* .technical-section h2{
-
-    margin-inline: auto;
-    font-family: var(--title-font);
-    font-size: var(--title-font-size);
-    font-weight: 400;
-    text-align: center;
-    padding-block-start: 1.5em;
-
-} */
-
 .tec-wrapper{
     inline-size: 80%;
     min-block-size: 40dvh;
-    margin-block-start: 2em;
+    /* padding-block-start: 1em; */
     padding-inline: 1em;
+    padding-block-end: 2.75em;
+    /* margin-block-end: 0.5em; */
     /* background-color: pink; */
     margin-inline: auto;
     display: grid;
@@ -659,20 +650,74 @@ label:has(input:checked) + .links{
     row-gap: 1.5em;
     place-items: center;
     justify-content: center;
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 2em; */
 
 }
 
 .tech-container{
-    /* inline-size: 5em; */
-    /* background-color: aqua; */
     text-wrap: nowrap;
 }
 
 .tech{
     font-size: 1.25em;
+}
+
+/* -------------------- CONTACT SECTION ----------------------------*/
+.contact-section{
+
+    min-block-size: 100dvh;
+    inline-size: 100%;
+    background: url(./images/A.png);
+    background-position: cover;
+    background-size: fill;
+    background-repeat: no-repeat;
+    place-content: center;
+
+}
+
+.contact-header{
+
+    color: var(--last-name-color);
+    font-weight: 700 !important;
+}
+
+.contact-wrapper{
+
+    min-inline-size: 50%;
+    margin-inline: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    /* background-color: black; */
+
+}
+
+.contacts{
+    /* container: contact / inline-size; */
+    /* background-color: red; */
+}
+
+.contacts span{
+    font-size: 1.5em;
+    margin: 0.5em;
+    padding: 0.5em;
+}
+
+@media (max-width: 690px){
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.icon{
+    margin-top: 0.5em;
+    padding: 1em;
+}
+
+.icon a i{
+    font-size: 3em;
 }
