@@ -557,14 +557,13 @@ label:has(input:checked) + .links{
     padding-block-end: 2.75em;
     margin-inline: auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(20em,1fr));
+    grid-template-columns: repeat(auto-fit, minmax(18em,1fr));
     column-gap: 1.5em;
     row-gap: 1.5em;
     place-items: center;
     justify-content: center;
 
 }
-
 .tech-container{
     text-wrap: nowrap;
 }
@@ -578,7 +577,7 @@ label:has(input:checked) + .links{
 
     min-block-size: 100dvh;
     inline-size: 100%;
-    background: url(./images/A.png);
+    background: url(./images/Last.jpg);
     background-position: cover;
     background-size: fill;
     background-repeat: no-repeat;
@@ -588,7 +587,6 @@ label:has(input:checked) + .links{
 
 .contact-header{
 
-    color: var(--last-name-color);
     font-weight: 700 !important;
 }
 
